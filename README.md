@@ -90,7 +90,7 @@ Add these **4 secrets**:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/codeforces_automation.git
+git clone https://github.com/modi-meet/codeforces_automation.git
 cd codeforces_automation
 
 # Install dependencies
