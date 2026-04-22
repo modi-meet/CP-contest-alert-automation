@@ -1,0 +1,30 @@
+name: Pre-Contest Alert
+
+# Runs every 30 minutes to check for contests starting in ~3 hours
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Manual trigger for testing
+
+jobs:
+  check-and-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check for upcoming contests
+        env:
+          CLIST_USERNAME: ${{ secrets.CLIST_USERNAME }}
+          CLIST_API_KEY: ${{ secrets.CLIST_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: python pre_contest_alert.py
