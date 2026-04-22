@@ -56,7 +56,7 @@ git init
 git add .
 git commit -m "Initial commit: contest alert system"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/codeforces_automation.git
+git remote add origin https://github.com/modi-meet/codeforces_automation.git
 git push -u origin main
 ```
 
@@ -71,7 +71,7 @@ Add these **4 secrets**:
 | `CLIST_USERNAME` | Your Clist.by username | `meetmodi` |
 | `CLIST_API_KEY` | Your Clist.by API key | `abc123def456...` |
 | `RESEND_API_KEY` | Your Resend API key | `re_xxxxxxxxxxxx` |
-| `RECIPIENT_EMAIL` | Your email address* | `meet@example.com` |
+| `RECIPIENT_EMAIL` | Your email address* | `mail.modimeet@gmail.com` |
 
 > **Important**: When using Resend's free `onboarding@resend.dev` sender, the `RECIPIENT_EMAIL` **must be the same email you signed up with** on Resend.
 
@@ -90,7 +90,7 @@ Add these **4 secrets**:
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/codeforces_automation.git
+git clone https://github.com/modi-meet/codeforces_automation.git
 cd codeforces_automation
 
 # Install dependencies
